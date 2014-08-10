@@ -21,13 +21,13 @@ Movement +Done
 
 Interaction
 
-	Correct piece on goal wins game
+	Correct piece on goal wins game +done
 
 	incorrect piece goes back to its home
 
 Source Control
 
-	Really just a place for backups
+	Really just a place for backups +done
 
 Alpha
 
