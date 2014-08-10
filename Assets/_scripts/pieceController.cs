@@ -22,6 +22,13 @@ public class pieceController : MonoBehaviour
 		{
 	
 		}
+		void OnTriggerEnter2D (Collider2D other)
+		{
+				Debug.Log ("collision!!");
+				if (drag == true) {
+						Destroy (other.gameObject);
+				}
+		}
 
 		void Initalize ()
 		{
