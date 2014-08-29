@@ -25,7 +25,7 @@ Interaction
 
 	Correct piece on goal wins game +done
 
-	incorrect piece goes back to its home
+	incorrect piece goes back to its home +done
 
 Source Control
 
