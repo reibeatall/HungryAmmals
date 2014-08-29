@@ -11,11 +11,13 @@ public class pieceController : MonoBehaviour
 		bool isMouseUp = false;
 		Vector3 startPos;
 		Vector3 offset;
+		
 
 		// Use this for initialization
 		void Start ()
 		{
 				Initalize ();
+				//startPos = gameObject.transform.position;
 		}
 	
 		// Update is called once per frame
@@ -32,7 +34,8 @@ public class pieceController : MonoBehaviour
 						Application.LoadLevel (0);
 				} else {
 						Debug.Log ("Wrong Piece");
-						this.transform.position = startPos;
+						Debug.Log (startPos);
+						//this.transform.position = startPos;
 				}
 		}
 
@@ -40,7 +43,7 @@ public class pieceController : MonoBehaviour
 		{
 				stopDragging = false;
 				drag = false;
-				startPos = transform.position;
+				startPos = gameObject.transform.position;
 
 		}
 		void OnMouseDown ()
@@ -70,6 +73,7 @@ public class pieceController : MonoBehaviour
 				if (goal == false) {
 						drag = false;
 						isMouseUp = true;
+						this.transform.position = startPos;
 				}
 		}
 }
