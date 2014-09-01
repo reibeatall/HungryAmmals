@@ -16,11 +16,11 @@ public class gameController : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				goalPool.Capacity = 3;
-				SpawnRandBlock (topSpawn, false);
-				SpawnRandBlock (midSpawn, false);
-				SpawnRandBlock (botSpawn, false);
-				SpawnRandBlock (goalSpawn, true);
+				//goalPool.Capacity = 3;
+				SpawnRandBlock (topSpawn);
+				SpawnRandBlock (midSpawn);
+				SpawnRandBlock (botSpawn);
+				SpawnGoalBlock (goalSpawn);
 				//GameObject topPiece = Instantiate (blockPool [0]) as GameObject;
 				//topPiece.transform.position = topSpawn;
 				//GameObject midPiece = Instantiate (blockPool [1]) as GameObject;
@@ -42,22 +42,20 @@ public class gameController : MonoBehaviour
 		
 		}
 		
-		void SpawnRandBlock (Vector3 spawn, bool goal)
+		void SpawnRandBlock (Vector3 spawn)
 		{
-				if (goal == false) {
-						int RandIndex = Random.Range (0, blockPool.Count);
-						GameObject piece = Instantiate (blockPool [RandIndex]) as GameObject;
-						piece.transform.position = spawn;
-						goalPool.Add (blockPool [RandIndex]);
-						blockPool.Remove (blockPool [RandIndex]);
-				} else {
-						int RandIndex = Random.Range (0, goalPool.Count);
-						GameObject piece = Instantiate (goalPool [RandIndex]) as GameObject;
-						piece.transform.position = spawn;
-						piece.GetComponent<pieceController> ().goal = true;
-
-				
-				}
-					
+				int RandIndex = Random.Range (0, blockPool.Count);
+				GameObject piece = Instantiate (blockPool [RandIndex]) as GameObject;
+				piece.transform.position = spawn;
+				goalPool.Add (blockPool [RandIndex]);
+				blockPool.Remove (blockPool [RandIndex]);
 		} 
+		void SpawnGoalBlock (Vector3 spawn)
+		{
+				int RandIndex = Random.Range (0, goalPool.Count);
+				GameObject goal = Instantiate (goalPool [RandIndex]) as GameObject;
+				goal.transform.position = spawn;
+				goal.GetComponent<pieceController> ().goal = true;
+		
+		}
 }
