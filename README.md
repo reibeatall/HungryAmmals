@@ -33,19 +33,22 @@ Source Control
 
 Alpha
 
-Random placement/selection of pieces
+Random placement/selection of pieces + Done
 
-	 Goal is always one piece
+	 Goal is always one piece + Done
 
 Progression
 
-	 After match is completed, new level spawns
+	 After match is completed, new level spawns + Done (sorta? It resets so I guess this is done)
 
 Beta
 
-Art!	
+Art!
 
 	 Make it purdy
+
+	Get a shape to appear, instead of the block
+	black out the shape when it is a goal
 Menu
 
 Ui
