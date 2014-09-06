@@ -21,19 +21,6 @@ public class gameController : MonoBehaviour
 				SpawnRandBlock (midSpawn);
 				SpawnRandBlock (botSpawn);
 				SpawnGoalBlock (goalSpawn);
-				//GameObject topPiece = Instantiate (blockPool [0]) as GameObject;
-				//topPiece.transform.position = topSpawn;
-				//GameObject midPiece = Instantiate (blockPool [1]) as GameObject;
-				//midPiece.transform.position = midSpawn;
-				//GameObject botPiece = Instantiate (blockPool [2]) as GameObject;
-				//botPiece.transform.position = botSpawn;
-				//goalPool [0] = topPiece;
-				//goalPool [1] = midPiece;
-				//goalPool [2] = botPiece;
-				//Debug.Log (goalPool [0]);
-				//GameObject goal = Instantiate (goalPool [Random.Range (0, 3)]) as GameObject;
-				//goal.GetComponent<pieceController> ().goal = true;
-				//goal.transform.position = goalSpawn;
 		}
 	
 		// Update is called once per frame
@@ -56,6 +43,8 @@ public class gameController : MonoBehaviour
 				GameObject goal = Instantiate (goalPool [RandIndex]) as GameObject;
 				goal.transform.position = spawn;
 				goal.GetComponent<pieceController> ().goal = true;
+				//Save this line for when I spawn objects that are different shapes
+				//goal.renderer.material.color = Color.black;
 		
 		}
 }
