@@ -45,6 +45,14 @@ Beta
 
 Art!
 
+	- background (s) - Farm at the start
+	- Animals? - Cow, horse, chicken, goat, pig, sheep, dog, cat
+	- Confetti or something exciting when an animal is matched up
+Sound!
+	- Sound for each animal
+	- Silly music in the background
+	- Voice over for "Which animal is hiding?"
+
 	 Make it purdy
 
 	Get a shape to appear, instead of the block
