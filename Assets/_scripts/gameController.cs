@@ -12,6 +12,8 @@ public class gameController : MonoBehaviour
 		public Vector3 goalSpawn;
 		public List<GameObject> blockPool;
 		public List<GameObject> goalPool;
+		public List<Sprite> spritePool;
+		public GameObject body;
 
 		// Use this for initialization
 		void Start ()
@@ -32,9 +34,12 @@ public class gameController : MonoBehaviour
 		void SpawnRandBlock (Vector3 spawn)
 		{
 				int RandIndex = Random.Range (0, blockPool.Count);
-				GameObject piece = Instantiate (blockPool [RandIndex]) as GameObject;
+				int RandSprite = Random.Range (0, spritePool.Count);
+				GameObject piece = Instantiate (body) as GameObject;
 				piece.transform.position = spawn;
-				goalPool.Add (blockPool [RandIndex]);
+				piece.GetComponent<SpriteRenderer> ().sprite = spritePool [RandSprite];
+				spritePool.Remove (spritePool [RandSprite]);
+				goalPool.Add (piece);
 				blockPool.Remove (blockPool [RandIndex]);
 		} 
 		void SpawnGoalBlock (Vector3 spawn)
@@ -44,7 +49,7 @@ public class gameController : MonoBehaviour
 				goal.transform.position = spawn;
 				goal.GetComponent<pieceController> ().goal = true;
 				//Save this line for when I spawn objects that are different shapes
-				//goal.renderer.material.color = Color.black;
+				goal.renderer.material.color = Color.black;
 		
 		}
 }
