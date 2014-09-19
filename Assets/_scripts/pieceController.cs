@@ -47,15 +47,15 @@ public class pieceController : MonoBehaviour
 				startPos = gameObject.transform.position;
 
 		}
-		//void OnMouseDown ()
-		//{
-		//		if (goal == false) {
-		//				isMouseUp = false;
-		//				drag = true;
+		void OnMouseDown ()
+		{
+				if (goal == false) {
+						isMouseUp = false;
+						drag = true;
 
-		//				offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
-		//		}
-		//	}
+						offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
+				}
+			}
 
 		void OnMouseDrag ()
 		{
