@@ -27,17 +27,17 @@ public class pieceController : MonoBehaviour
 				x = Input.mousePosition.x;
 				y = Input.mousePosition.y;
 		}
-		void OnTriggerEnter2D (Collider2D other)
+		void OnTriggerExit2D (Collider2D other)
 		{
 				Debug.Log ("collision!!");
-				if (other.CompareTag (this.gameObject.tag)) {
-						Destroy (other.gameObject);
+				
+				if (other.GetComponent<SpriteRenderer> ().sprite == (this.GetComponent<SpriteRenderer> ().sprite) & (isMouseUp == true)) {
+						Destroy (other.gameObject); 
 						Debug.Log ("game ovhhh");
 						Application.LoadLevel (0);
 				} else {
 						Debug.Log ("Wrong Piece");
 						Debug.Log (startPos);
-						//this.transform.position = startPos;
 				}
 		}
 
@@ -52,21 +52,18 @@ public class pieceController : MonoBehaviour
 				if (goal == false) {
 						isMouseUp = false;
 						drag = true;
+						Debug.Log (x);
+						Debug.Log ("click!");
 
 						offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
 				}
-			}
+		}
 
 		void OnMouseDrag ()
 		{
 				if (goal == false) {
 						if (drag) {
-								//	Vector3 curScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
-								//	Vector3 curPosition = Camera.main.ScreenToWorldPoint (curScreenPoint) + offset;
-								//	transform.position = curPosition;
 								transform.position = Camera.main.ScreenToWorldPoint (new Vector3 (x, y, 10.0f));
-								Debug.Log (x);
-								Debug.Log ("click!");
 
 						}
 				}
