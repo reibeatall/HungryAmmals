@@ -14,6 +14,7 @@ public class gameController : MonoBehaviour
 		public List<GameObject> goalPool;
 		public List<Sprite> spritePool;
 		public GameObject body;
+	
 
 		// Use this for initialization
 		void Start ()
@@ -24,6 +25,7 @@ public class gameController : MonoBehaviour
 				SpawnRandBlock (botSpawn);
 				SpawnGoalBlock (goalSpawn);
 		}
+		
 	
 		// Update is called once per frame
 		void Update ()
