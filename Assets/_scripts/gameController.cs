@@ -43,6 +43,7 @@ public class gameController : MonoBehaviour
 				spritePool.Remove (spritePool [RandSprite]);
 				goalPool.Add (piece);
 				blockPool.Remove (blockPool [RandIndex]);
+				piece.name = (goalPool.Count).ToString ();
 		} 
 		void SpawnGoalBlock (Vector3 spawn)
 		{

@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\GameMusic.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\pieceController.cs">
     <Files>
+      <File FileName="Assets\_scripts\spawn.cs" Line="7" Column="27" />
       <File FileName="Assets\_scripts\GameMusic.cs" Line="22" Column="2" />
-      <File FileName="Assets\_scripts\gameController.cs" Line="28" Column="3" />
-      <File FileName="Assets\_scripts\pieceController.cs" Line="40" Column="28" />
+      <File FileName="Assets\_scripts\gameController.cs" Line="46" Column="1" />
+      <File FileName="Assets\_scripts\pieceController.cs" Line="43" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

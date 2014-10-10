@@ -5,6 +5,7 @@ public class pieceController : MonoBehaviour
 {
 
 		public bool goal = false;
+		public GameObject restart;
 
 		bool drag;
 		bool isMouseUp = false;
@@ -12,6 +13,7 @@ public class pieceController : MonoBehaviour
 		Vector3 offset;
 		float x;
 		float y;
+		public object pieces;
 		
 
 		// Use this for initialization
@@ -33,8 +35,13 @@ public class pieceController : MonoBehaviour
 				
 				if (other.GetComponent<SpriteRenderer> ().sprite == (this.GetComponent<SpriteRenderer> ().sprite) & (isMouseUp == true)) {
 						Destroy (other.gameObject); 
+						Destroy (GameObject.Find ("Spawn(Clone)"));
+						Destroy (GameObject.Find ("1"));
+						Destroy (GameObject.Find ("2"));
+						Destroy (GameObject.Find ("3"));
 						Debug.Log ("game ovhhh");
-						Application.LoadLevel (0);
+						Victory ();
+						//	Application.LoadLevel (0);
 				} else {
 						Debug.Log ("Wrong Piece");
 						Debug.Log (startPos);
@@ -77,4 +84,10 @@ public class pieceController : MonoBehaviour
 						this.transform.position = startPos;
 				}
 		}
+		
+		void Victory ()
+		{
+				GameObject spawner = Instantiate (restart) as GameObject;
+		}
 }
+

@@ -49,6 +49,7 @@
      <Compile Include="Assets\_scripts\GameMusic.cs" />
      <Compile Include="Assets\_scripts\gameController.cs" />
      <Compile Include="Assets\_scripts\pieceController.cs" />
+     <Compile Include="Assets\_scripts\spawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
