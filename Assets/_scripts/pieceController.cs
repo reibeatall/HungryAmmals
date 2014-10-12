@@ -13,7 +13,6 @@ public class pieceController : MonoBehaviour
 		Vector3 offset;
 		float x;
 		float y;
-		public object pieces;
 		
 
 		// Use this for initialization
@@ -29,6 +28,9 @@ public class pieceController : MonoBehaviour
 				x = Input.mousePosition.x;
 				y = Input.mousePosition.y;
 		}
+		
+	
+		
 		void OnTriggerExit2D (Collider2D other)
 		{
 				Debug.Log ("collision!!");
@@ -76,8 +78,10 @@ public class pieceController : MonoBehaviour
 				}
 		}
 
+//Change to IENuemerator for wait for seconds to work 
 		void OnMouseUp ()
 		{
+				//	yield return new WaitForSeconds (1);
 				if (goal == false) {
 						drag = false;
 						isMouseUp = true;
