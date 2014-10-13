@@ -4,20 +4,34 @@ using System.Collections.Generic;
 
 public class GameMusic : MonoBehaviour
 {
+//		This was here for when I was doing level reload. Not really needed, but want to make sure.	
+//		private static GameMusic instance = null;
+//		public static GameMusic Instance {
+//				get { return instance; }
+//		}
+//		void Awake ()
+//		{
+//				if (instance != null && instance != this) {
+//						Destroy (this.gameObject);
+//						return;
+//				} else {
+//						instance = this;
+//				}
+//				DontDestroyOnLoad (this.gameObject);
+//		}
 	
-		private static GameMusic instance = null;
-		public static GameMusic Instance {
-				get { return instance; }
-		}
-		void Awake ()
+		public List<AudioClip> musicTracks;
+	
+	
+		void Update ()
 		{
-				if (instance != null && instance != this) {
-						Destroy (this.gameObject);
-						return;
-				} else {
-						instance = this;
+				if (!audio.isPlaying) {
+						int RandIndex = Random.Range (0, 5);
+						audio.clip = musicTracks [RandIndex];
+						audio.Play ();
 				}
-				DontDestroyOnLoad (this.gameObject);
+	
 		}
+	
 	
 }
