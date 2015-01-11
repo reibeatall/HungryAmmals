@@ -25,7 +25,7 @@ Sound!
 
 	 Make it purdy
 
-Menu
+Menu 
 
 Ui
 
@@ -33,9 +33,9 @@ Ui
 
 Things for release:
 Starting menu
-- Two modes: Timed and unlimited
+- Two modes: Timed and unlimited -- Added, need to be pretty
 - Choose background?
-- Quit button
+- Quit button -- Added, need to be pretty
  
 Game
 For timer mode
@@ -43,7 +43,7 @@ For timer mode
 - Add score
 - High Score?
 for both modes
-- Back button
+- Back button -- Added, need to be pretty
 - Sounds
 - - Per animal? 
 - - During proper match
