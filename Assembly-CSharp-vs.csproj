@@ -51,6 +51,8 @@
      <Compile Include="Assets\_scripts\GoHome.cs" />
      <Compile Include="Assets\_scripts\QuitGame.cs" />
      <Compile Include="Assets\_scripts\Timed.cs" />
+     <Compile Include="Assets\_scripts\TimerText.cs" />
+     <Compile Include="Assets\_scripts\countdownTimer.cs" />
      <Compile Include="Assets\_scripts\gameController.cs" />
      <Compile Include="Assets\_scripts\pieceController.cs" />
      <Compile Include="Assets\_scripts\spawn.cs" />
