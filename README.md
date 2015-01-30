@@ -37,10 +37,12 @@ Starting menu
 - Choose background?
 - Quit button -- Added, need to be pretty
  
+UGH: Should refactor out spawning from game controller. 
+
 Game
 For timer mode
-- Add time limit
-- Add score
+- Add time limit 
+- Add score --
 - High Score?
 for both modes
 - Back button -- Added, need to be pretty
@@ -51,3 +53,4 @@ for both modes
 - - Names of animals when it matches?
 - particles when match happens
 - 
+
