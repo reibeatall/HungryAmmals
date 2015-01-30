@@ -13,12 +13,14 @@ public class pieceController : MonoBehaviour
 		Vector3 offset;
 		float x;
 		float y;
+	public int totalScore;
 		
 
 		// Use this for initialization
 		void Start ()
 		{
 				Initalize ();
+		totalScore = GetComponent<gameController>().score;
 				//startPos = gameObject.transform.position;
 		}
 	
@@ -41,12 +43,11 @@ public class pieceController : MonoBehaviour
 						Destroy (GameObject.Find ("1"));
 						Destroy (GameObject.Find ("2"));
 						Destroy (GameObject.Find ("3"));
-						Debug.Log ("game ovhhh");
+			totalScore += 1;
 						Victory ();
 						//	Application.LoadLevel (0);
 				} else {
-						Debug.Log ("Wrong Piece");
-						Debug.Log (startPos);
+
 				}
 		}
 
@@ -61,9 +62,6 @@ public class pieceController : MonoBehaviour
 				if (goal == false) {
 						isMouseUp = false;
 						drag = true;
-						Debug.Log (x);
-						Debug.Log ("click!");
-
 						offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
 				}
 		}
