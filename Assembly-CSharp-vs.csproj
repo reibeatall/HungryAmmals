@@ -55,6 +55,8 @@
      <Compile Include="Assets\_scripts\countdownTimer.cs" />
      <Compile Include="Assets\_scripts\gameController.cs" />
      <Compile Include="Assets\_scripts\pieceController.cs" />
+     <Compile Include="Assets\_scripts\scoreController.cs" />
+     <Compile Include="Assets\_scripts\scoreText.cs" />
      <Compile Include="Assets\_scripts\spawn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity Latest/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

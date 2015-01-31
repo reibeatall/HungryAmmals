@@ -14,13 +14,15 @@ public class pieceController : MonoBehaviour
 		float x;
 		float y;
 	public int totalScore;
+	private scoreController scoreController;
 		
 
 		// Use this for initialization
 		void Start ()
 		{
+		GameObject scoreControllerObject = GameObject.FindGameObjectWithTag("score");
 				Initalize ();
-		totalScore = GetComponent<gameController>().score;
+		 scoreController = scoreControllerObject.GetComponent<scoreController>();
 				//startPos = gameObject.transform.position;
 		}
 	
@@ -29,6 +31,7 @@ public class pieceController : MonoBehaviour
 		{
 				x = Input.mousePosition.x;
 				y = Input.mousePosition.y;
+
 		}
 		
 	
@@ -38,12 +41,13 @@ public class pieceController : MonoBehaviour
 				Debug.Log ("collision!!");
 				
 				if (other.GetComponent<SpriteRenderer> ().sprite == (this.GetComponent<SpriteRenderer> ().sprite) & (isMouseUp == true)) {
-						Destroy (other.gameObject); 
+			Destroy (other.gameObject); 
 						Destroy (GameObject.Find ("Spawn(Clone)"));
 						Destroy (GameObject.Find ("1"));
 						Destroy (GameObject.Find ("2"));
 						Destroy (GameObject.Find ("3"));
-			totalScore += 1;
+scoreController.addToScore();
+			Debug.Log(scoreController.score);
 						Victory ();
 						//	Application.LoadLevel (0);
 				} else {

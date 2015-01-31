@@ -14,7 +14,6 @@ public class gameController : MonoBehaviour
 		public List<GameObject> goalPool;
 		public List<Sprite> spritePool;
 		public GameObject body;
-	public int score;
 	
 
 		// Use this for initialization
@@ -25,7 +24,6 @@ public class gameController : MonoBehaviour
 				SpawnRandBlock (midSpawn);
 				SpawnRandBlock (botSpawn);
 				SpawnGoalBlock (goalSpawn);
-		score = 0;
 		}
 		
 	
