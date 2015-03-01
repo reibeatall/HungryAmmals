@@ -41,7 +41,7 @@ UGH: Should refactor out spawning from game controller.
 
 Game
 For timer mode
-- Add time limit 
+- Add time limit --Done
 - Add score -- Done
 - High Score? -- Done
 for both modes
