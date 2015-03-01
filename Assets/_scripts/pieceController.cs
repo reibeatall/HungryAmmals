@@ -46,8 +46,8 @@ public class pieceController : MonoBehaviour
 						Destroy (GameObject.Find ("1"));
 						Destroy (GameObject.Find ("2"));
 						Destroy (GameObject.Find ("3"));
-scoreController.addToScore();
-			Debug.Log(scoreController.score);
+						scoreController.addToScore();
+						Debug.Log(scoreController.score);
 						Victory ();
 						//	Application.LoadLevel (0);
 				} else {
