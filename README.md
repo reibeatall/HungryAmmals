@@ -42,8 +42,8 @@ UGH: Should refactor out spawning from game controller.
 Game
 For timer mode
 - Add time limit 
-- Add score --
-- High Score?
+- Add score -- Done
+- High Score? -- Done
 for both modes
 - Back button -- Added, need to be pretty
 - Sounds
