@@ -6,6 +6,7 @@ public class pieceController : MonoBehaviour
 
 		public bool goal = false;
 		public GameObject restart;
+		public Score score;
 
 		bool drag;
 		bool isMouseUp = false;
@@ -43,6 +44,10 @@ public class pieceController : MonoBehaviour
 						Destroy (GameObject.Find ("3"));
 						Debug.Log ("game ovhhh");
 						Victory ();
+						score = GetComponent<Score> ();
+						score.score += 1;
+						Debug.Log (score.score);
+						
 						//	Application.LoadLevel (0);
 				} else {
 						Debug.Log ("Wrong Piece");

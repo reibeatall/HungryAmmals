@@ -7,7 +7,7 @@ public class Timed : MonoBehaviour
 		// Update is called once per frame
 		public void ChangeToScene ()
 		{
-				Application.LoadLevel (1);
+				Application.LoadLevel (2);
 		}
 	
 }

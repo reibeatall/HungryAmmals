@@ -25,10 +25,10 @@ public class GameMusic : MonoBehaviour
 	
 		void Update ()
 		{
-				if (!audio.isPlaying) {
+				if (!GetComponent<AudioSource>().isPlaying) {
 						int RandIndex = Random.Range (0, 5);
-						audio.clip = musicTracks [RandIndex];
-						audio.Play ();
+						GetComponent<AudioSource>().clip = musicTracks [RandIndex];
+						GetComponent<AudioSource>().Play ();
 				}
 	
 		}

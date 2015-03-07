@@ -14,6 +14,7 @@ public class gameController : MonoBehaviour
 		public List<GameObject> goalPool;
 		public List<Sprite> spritePool;
 		public GameObject body;
+ 
 	
 
 		// Use this for initialization
@@ -24,6 +25,7 @@ public class gameController : MonoBehaviour
 				SpawnRandBlock (midSpawn);
 				SpawnRandBlock (botSpawn);
 				SpawnGoalBlock (goalSpawn);
+
 		}
 		
 	
@@ -52,7 +54,7 @@ public class gameController : MonoBehaviour
 				goal.transform.position = spawn;
 				goal.GetComponent<pieceController> ().goal = true;
 				//Save this line for when I spawn objects that are different shapes
-				goal.renderer.material.color = Color.black;
+				goal.GetComponent<Renderer>().material.color = Color.black;
 		
 		}
 }
