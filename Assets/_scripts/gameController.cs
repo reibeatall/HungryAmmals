@@ -52,7 +52,7 @@ public class gameController : MonoBehaviour
 				goal.transform.position = spawn;
 				goal.GetComponent<pieceController> ().goal = true;
 				//Save this line for when I spawn objects that are different shapes
-				goal.renderer.material.color = Color.black;
+				goal.GetComponent<Renderer>().material.color = Color.black;
 		
 		}
 }

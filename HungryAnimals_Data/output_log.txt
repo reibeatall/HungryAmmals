@@ -10,7 +10,7 @@ Platform assembly: C:\Users\SimonA\Documents\Hungry Animals\HungryAmmals\HungryA
 Loading C:\Users\SimonA\Documents\Hungry Animals\HungryAmmals\HungryAnimals_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\SimonA\Documents\Hungry Animals\HungryAmmals\HungryAnimals_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\SimonA\Documents\Hungry Animals\HungryAmmals\HungryAnimals_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.068 seconds
+- Completed reload, in  0.378 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
