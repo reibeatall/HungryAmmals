@@ -20,7 +20,7 @@ public class TimerText : MonoBehaviour
 		void Update ()
 		{
 				timeRemaining -= Time.deltaTime;
-				timerText.text = "Time left: " + (int)timeRemaining;
+				timerText.text = " " + (int)timeRemaining;
 				
 				if (timeRemaining <= 0) {
 						Debug.Log ("time's up!");
