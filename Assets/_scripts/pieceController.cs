@@ -14,12 +14,16 @@ public class pieceController : MonoBehaviour
 		Vector3 offset;
 		float x;
 		float y;
+	public int totalScore;
+	private scoreController scoreController;
 		
 
 		// Use this for initialization
 		void Start ()
 		{
+		GameObject scoreControllerObject = GameObject.FindGameObjectWithTag("score");
 				Initalize ();
+		 scoreController = scoreControllerObject.GetComponent<scoreController>();
 				//startPos = gameObject.transform.position;
 		}
 	
@@ -28,6 +32,7 @@ public class pieceController : MonoBehaviour
 		{
 				x = Input.mousePosition.x;
 				y = Input.mousePosition.y;
+
 		}
 		
 	
@@ -37,12 +42,13 @@ public class pieceController : MonoBehaviour
 				Debug.Log ("collision!!");
 				
 				if (other.GetComponent<SpriteRenderer> ().sprite == (this.GetComponent<SpriteRenderer> ().sprite) & (isMouseUp == true)) {
-						Destroy (other.gameObject); 
+			Destroy (other.gameObject); 
 						Destroy (GameObject.Find ("Spawn(Clone)"));
 						Destroy (GameObject.Find ("1"));
 						Destroy (GameObject.Find ("2"));
 						Destroy (GameObject.Find ("3"));
-						Debug.Log ("game ovhhh");
+						scoreController.addToScore();
+						Debug.Log(scoreController.score);
 						Victory ();
 						score = GetComponent<Score> ();
 						score.score += 1;
@@ -50,8 +56,7 @@ public class pieceController : MonoBehaviour
 						
 						//	Application.LoadLevel (0);
 				} else {
-						Debug.Log ("Wrong Piece");
-						Debug.Log (startPos);
+
 				}
 		}
 
@@ -66,9 +71,6 @@ public class pieceController : MonoBehaviour
 				if (goal == false) {
 						isMouseUp = false;
 						drag = true;
-						Debug.Log (x);
-						Debug.Log ("click!");
-
 						offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
 				}
 		}
